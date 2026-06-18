@@ -1,10 +1,10 @@
-# @fluxlabs/react-native-nitro-google-number-hint
+# react-native-nitro-google-number-hint
 
 > Pick a phone number from the device using Google's **Phone Number Hint** API — a fast, permission-free [Nitro](https://nitro.margelo.com) module for React Native.
 
-[![Version](https://img.shields.io/npm/v/@fluxlabs/react-native-nitro-google-number-hint.svg)](https://www.npmjs.com/package/@fluxlabs/react-native-nitro-google-number-hint)
-[![Downloads](https://img.shields.io/npm/dm/@fluxlabs/react-native-nitro-google-number-hint.svg)](https://www.npmjs.com/package/@fluxlabs/react-native-nitro-google-number-hint)
-[![License](https://img.shields.io/npm/l/@fluxlabs/react-native-nitro-google-number-hint.svg)](./LICENSE)
+[![Version](https://img.shields.io/npm/v/react-native-nitro-google-number-hint.svg)](https://www.npmjs.com/package/react-native-nitro-google-number-hint)
+[![Downloads](https://img.shields.io/npm/dm/react-native-nitro-google-number-hint.svg)](https://www.npmjs.com/package/react-native-nitro-google-number-hint)
+[![License](https://img.shields.io/npm/l/react-native-nitro-google-number-hint.svg)](./LICENSE)
 
 The [Phone Number Hint API](https://developers.google.com/identity/phone-number-hint/android) shows a lightweight bottom sheet that lets the user pick one of the phone numbers already available on their device (from SIM cards and their Google account). It's the recommended way to pre-fill a phone number field — for example during sign-up or OTP flows — **without requesting any permissions**.
 
@@ -36,9 +36,9 @@ The [Phone Number Hint API](https://developers.google.com/identity/phone-number-
 ## Installation
 
 ```bash
-npm install @fluxlabs/react-native-nitro-google-number-hint react-native-nitro-modules
+npm install react-native-nitro-google-number-hint react-native-nitro-modules
 # or
-yarn add @fluxlabs/react-native-nitro-google-number-hint react-native-nitro-modules
+yarn add react-native-nitro-google-number-hint react-native-nitro-modules
 ```
 
 Then rebuild the Android app so autolinking picks up the native module:
@@ -57,7 +57,7 @@ There is **nothing else to configure** — no permissions, no `AndroidManifest.x
 Works with Expo via a [development build](https://docs.expo.dev/develop/development-builds/introduction/) — **no config plugin is required** (the module needs no permissions or manifest changes, and autolinking handles it during `npx expo prebuild`). It does **not** run in Expo Go, which can't load custom native code.
 
 ```bash
-npx expo install @fluxlabs/react-native-nitro-google-number-hint react-native-nitro-modules
+npx expo install react-native-nitro-google-number-hint react-native-nitro-modules
 npx expo prebuild
 npx expo run:android
 ```
@@ -71,7 +71,7 @@ npx expo run:android
 import {
   requestPhoneNumberHint,
   isPhoneNumberHintAvailable,
-} from '@fluxlabs/react-native-nitro-google-number-hint'
+} from 'react-native-nitro-google-number-hint'
 
 async function pickPhoneNumber() {
   if (!isPhoneNumberHintAvailable()) {
@@ -99,7 +99,7 @@ async function pickPhoneNumber() {
 Use the `getPhoneNumberHint()` convenience wrapper, which returns the selected number or `null`:
 
 ```ts
-import { getPhoneNumberHint } from '@fluxlabs/react-native-nitro-google-number-hint'
+import { getPhoneNumberHint } from 'react-native-nitro-google-number-hint'
 
 const phone = await getPhoneNumberHint()
 if (phone) {
@@ -140,7 +140,7 @@ Convenience wrapper that returns just the selected phone number, or `null` when 
 The picker always returns the number in **E.164** form, which begins with the country calling code (`+44` for the UK, `+1` for the US/Canada, `+91` for India, …). This helper splits that for you, or returns `null` when no number was selected:
 
 ```ts
-import { getParsedPhoneNumberHint } from '@fluxlabs/react-native-nitro-google-number-hint'
+import { getParsedPhoneNumberHint } from 'react-native-nitro-google-number-hint'
 
 const parts = await getParsedPhoneNumberHint()
 // {

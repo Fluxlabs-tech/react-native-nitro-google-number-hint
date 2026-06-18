@@ -5,7 +5,7 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@fluxlabs/react-native-nitro-google-number-hint": ["../src"]
+      "react-native-nitro-google-number-hint": ["../src"]
     }
   }
 }

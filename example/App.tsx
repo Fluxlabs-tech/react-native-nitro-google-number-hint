@@ -11,7 +11,7 @@ import {
   requestPhoneNumberHint,
   parsePhoneNumber,
   type PhoneNumberHintResult,
-} from '@fluxlabs/react-native-nitro-google-number-hint';
+} from 'react-native-nitro-google-number-hint';
 
 function App(): React.JSX.Element {
   const [available] = React.useState(isPhoneNumberHintAvailable);

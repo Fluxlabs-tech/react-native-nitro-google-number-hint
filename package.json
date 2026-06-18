@@ -1,5 +1,5 @@
 {
-  "name": "@fluxlabs/react-native-nitro-google-number-hint",
+  "name": "react-native-nitro-google-number-hint",
   "version": "0.1.0",
   "description": "Pick a phone number from the device using Google's Phone Number Hint API — a fast, permission-free Nitro module for React Native (Android).",
   "main": "./lib/commonjs/index.js",
@@ -48,7 +48,7 @@
     "type": "git",
     "url": "git+https://github.com/Fluxlabs-tech/react-native-nitro-google-number-hint.git"
   },
-  "author": "FluxLabs <arjitb@fluxlabs.in>",
+  "author": "fluxlabs",
   "license": "MIT",
   "bugs": "https://github.com/Fluxlabs-tech/react-native-nitro-google-number-hint/issues",
   "homepage": "https://github.com/Fluxlabs-tech/react-native-nitro-google-number-hint#readme",
