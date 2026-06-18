@@ -1,0 +1,26 @@
+{
+  "$schema": "https://nitro.margelo.com/nitro.schema.json",
+  "cxxNamespace": [
+    "nitrogooglenumberhint"
+  ],
+  "ios": {
+    "iosModuleName": "NitroGoogleNumberHint"
+  },
+  "android": {
+    "androidNamespace": [
+      "nitrogooglenumberhint"
+    ],
+    "androidCxxLibName": "NitroGoogleNumberHint"
+  },
+  "autolinking": {
+    "NitroGoogleNumberHint": {
+      "android": {
+        "language": "kotlin",
+        "implementationClassName": "HybridNitroGoogleNumberHint"
+      }
+    }
+  },
+  "ignorePaths": [
+    "**/node_modules"
+  ]
+}
