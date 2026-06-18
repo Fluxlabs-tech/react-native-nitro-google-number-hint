@@ -52,6 +52,16 @@ There is **nothing else to configure** — no permissions, no `AndroidManifest.x
 > If the module isn't picked up after upgrading, do a clean rebuild:
 > `cd android && ./gradlew clean && cd .. && npx react-native run-android`.
 
+### Expo
+
+Works with Expo via a [development build](https://docs.expo.dev/develop/development-builds/introduction/) — **no config plugin is required** (the module needs no permissions or manifest changes, and autolinking handles it during `npx expo prebuild`). It does **not** run in Expo Go, which can't load custom native code.
+
+```bash
+npx expo install @fluxlabs/react-native-nitro-google-number-hint react-native-nitro-modules
+npx expo prebuild
+npx expo run:android
+```
+
 > [!NOTE]
 > Phone Number Hint relies on Google Play Services. It will not work on devices/emulators without it (e.g. plain AOSP images). Use a Google Play system image when testing on an emulator.
 
