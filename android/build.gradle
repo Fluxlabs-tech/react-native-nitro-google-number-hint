@@ -141,7 +141,7 @@ dependencies {
   // AndroidX Activity Result APIs used to present the hint picker. Already on
   // the classpath transitively via androidx.appcompat, but declared directly
   // because we use ComponentActivity / IntentSenderRequest here.
-  implementation "androidx.activity:activity-ktx:1.8.2"
+  implementation "androidx.activity:activity-ktx:1.13.0"
 
   // Google Play Services – provides the Phone Number Hint (Identity) APIs.
   implementation "com.google.android.gms:play-services-auth:21.6.0"
