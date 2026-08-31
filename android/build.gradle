@@ -144,7 +144,7 @@ dependencies {
   implementation "androidx.activity:activity-ktx:1.8.2"
 
   // Google Play Services – provides the Phone Number Hint (Identity) APIs.
-  implementation "com.google.android.gms:play-services-auth:21.6.0"
+  implementation "com.google.android.gms:play-services-auth:22.0.0"
 }
 
 if (isNewArchitectureEnabled()) {
